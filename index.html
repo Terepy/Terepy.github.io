@@ -18,16 +18,18 @@
   </head>
   <body class="bg-dark">
 
-    <header class="container-fluid p-3 border bg-dark text-white">
-      <h1>Terepy GitHub</h1>
-      <p>Hosting my Mess since 2020</p>
-    </header>
+    <script type="module">
+      import { SiteHeader } from '/header/header.js'
+      customElements.define('site-header', SiteHeader);
+    </script>
+
+    <site-header></site-header>
 
     <div class="container-fluid p-3 border text-white">
-      <p><a href="./sorter">Sorter</a></p>
+      This is where I keep my bread
     </div>
 
-    <footer class="container-fluid p-3 border bg-dark text-white">
+    <footer class="container-fluid p-3 border bg-dark text-white sticky-bottom">
       <a href="https://twitter.com/DarkSunGundolin">
         <i class="fa fa-twitter"></i> Twitter
       </a>

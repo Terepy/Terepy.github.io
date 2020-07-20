@@ -18,10 +18,12 @@
   </head>
   <body class="bg-dark">
 
-    <header class="container-fluid p-3 border bg-dark text-white">
-      <h1>Soulsborne Sorter</h1>
-      <p>Hell yeah baby</p>
-    </header>
+    <script type="module">
+      import { SiteHeader } from '/header/header.js'
+      customElements.define('site-header', SiteHeader);
+    </script>
+
+    <site-header></site-header>
 
     <div class="container-fluid p-3 border text-white">
       <p>Game go here</p>
