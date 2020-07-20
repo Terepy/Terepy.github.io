@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Terepy's Page</title>
-    <link rel="icon" href="./resources/img/favicon.png">
+    <link rel="icon" href="/resources/img/favicon.png">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"/>
@@ -15,25 +15,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="module">
+      import { SiteHeader } from '/header/header.js';
+      import { SiteNavigation } from '/navbar/navbar.js';
+      import { SiteFooter } from '/footer/footer.js';
+
+      customElements.define('site-header', SiteHeader);
+      customElements.define('site-nav', SiteNavigation);
+      customElements.define('site-footer', SiteFooter);
+    </script>
   </head>
   <body class="bg-dark">
 
-    <script type="module">
-      import { SiteHeader } from '/header/header.js'
-      customElements.define('site-header', SiteHeader);
-    </script>
-
     <site-header></site-header>
+    <site-nav></site-nav>
 
     <div class="container-fluid p-3 border text-white">
-      This is where I keep my bread
+      <p>This is where I keep my bread</p>
     </div>
 
-    <footer class="container-fluid p-3 border bg-dark text-white sticky-bottom">
-      <a href="https://twitter.com/DarkSunGundolin">
-        <i class="fa fa-twitter"></i> Twitter
-      </a>
-    </footer>
+    <site-footer></site-footer>
 
   </body>
 </html>

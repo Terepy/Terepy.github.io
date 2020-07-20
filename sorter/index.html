@@ -15,25 +15,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script type="module">
+      import { SiteHeader } from '/header/header.js';
+      import { SiteNavigation } from '/navbar/navbar.js';
+      import { SiteFooter } from '/footer/footer.js';
+
+      customElements.define('site-header', SiteHeader);
+      customElements.define('site-nav', SiteNavigation);
+      customElements.define('site-footer', SiteFooter);
+    </script>
   </head>
   <body class="bg-dark">
 
-    <script type="module">
-      import { SiteHeader } from '/header/header.js'
-      customElements.define('site-header', SiteHeader);
-    </script>
-
     <site-header></site-header>
+    <site-nav></site-nav>
 
     <div class="container-fluid p-3 border text-white">
       <p>Game go here</p>
     </div>
 
-    <footer class="container-fluid p-3 border bg-dark text-white">
-      <a href="https://twitter.com/DarkSunGundolin">
-        <i class="fa fa-twitter"></i> Twitter
-      </a>
-    </footer>
+    <site-footer></site-footer>
 
   </body>
 </html>
