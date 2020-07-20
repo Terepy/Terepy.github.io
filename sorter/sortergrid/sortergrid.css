@@ -5,7 +5,8 @@
 }
 
 .sorter-box {
-  height: 500px;
+  height: auto;
+  padding-bottom: 40px;
 }
 
 .main-row {
