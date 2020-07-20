@@ -1,0 +1,26 @@
+.row {
+  background-color: #000;
+  outline: 1px solid #ccc;
+  text-align: center;
+}
+
+.sorter-box {
+  height: 500px;
+}
+
+.main-row {
+  height: 100%;
+}
+
+.tie-row {
+  height: 75%;
+}
+
+.undo-row {
+  height: 25%;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Soulsborne Sorter</title>
-    <link rel="icon" href="./resources/img/favicon.png">
+    <link rel="icon" href="/resources/img/favicon.png">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"/>
@@ -16,14 +16,18 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="/sorter/sortergrid/sortergrid.css">
+
     <script type="module">
       import { SiteHeader } from '/header/header.js';
       import { SiteNavigation } from '/navbar/navbar.js';
       import { SiteFooter } from '/footer/footer.js';
+      import { SorterGrid } from '/sorter/sortergrid/sortergrid.js'
 
       customElements.define('site-header', SiteHeader);
       customElements.define('site-nav', SiteNavigation);
       customElements.define('site-footer', SiteFooter);
+      customElements.define('sort-grid', SorterGrid);
     </script>
   </head>
   <body class="bg-dark">
@@ -32,7 +36,7 @@
     <site-nav></site-nav>
 
     <div class="container-fluid p-3 border text-white">
-      <p>Game go here</p>
+      <sort-grid></sort-grid>
     </div>
 
     <site-footer></site-footer>
