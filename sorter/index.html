@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Soulsborne Sorter</title>
-    <link rel="icon" href="/resources/img/favicon.png">
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/sorter/sortergrid/sortergrid.css">
+<head>
+  <title>Soulsborne Sorter</title>
+  <link rel="icon" href="/resources/img/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <script type="module">
-      import { SiteHeader } from '/header/header.js';
-      import { SiteNavigation } from '/navbar/navbar.js';
-      import { SiteFooter } from '/footer/footer.js';
-      import { SorterGrid } from '/sorter/sortergrid/sortergrid.js'
+  <link rel="stylesheet" type="text/css" href="/sorter/sorter.css">
 
-      customElements.define('site-header', SiteHeader);
-      customElements.define('site-nav', SiteNavigation);
-      customElements.define('site-footer', SiteFooter);
-      customElements.define('sort-grid', SorterGrid);
-    </script>
-  </head>
-  <body class="bg-dark">
+  <script type="module">
+    import { SiteHeader } from '/header/header.js';
+    import { SiteNavigation } from '/navbar/navbar.js';
+    import { SiteFooter } from '/footer/footer.js';
 
-    <site-header></site-header>
-    <site-nav></site-nav>
+    customElements.define('site-header', SiteHeader);
+    customElements.define('site-nav', SiteNavigation);
+    customElements.define('site-footer', SiteFooter);
+  </script>
+</head>
 
-    <div class="container-fluid p-3 border text-white">
-      <sort-grid></sort-grid>
+<body class="bg-dark">
+
+  <site-header></site-header>
+  <site-nav></site-nav>
+
+  <div class="container-fluid p-3 border text-white">
+    <h1>Character Sorter</h1>
+
+    <div class="container-fluid sorter-box">
+      <div class="row main-row">
+        <div id="a-choice" class="col-lg-5">
+          <img id="a-image" src="/resources/img/darksign.png" class="choice-image"/>
+          <p id="a-text">Choice A</p>
+        </div>
+        <div class="col-lg-2 middle-row">
+          <div id="tie-choice" class="row tie-row">
+            <div class="col-lg-12 my-auto">
+              <p>Tie</p>
+            </div>
+          </div>
+          <div id="undo-choice" class="row undo-row">
+            <div class="col-lg-12 my-auto">
+              <p>Undo</p>
+            </div>
+          </div>
+        </div>
+        <div id="b-choice" class="col-lg-5">
+          <img id="b-image" src="/resources/img/darksign.png" class="choice-image"/>
+          <p id="b-text">Choice B</p>
+        </div>
+      </div>
     </div>
 
-    <site-footer></site-footer>
+    <h3>Series</h3>
 
-  </body>
+    <div id="series-selector">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Dark Souls</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Dark Souls 2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Dark Souls 3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Bloodborne</label>
+      </div>
+    </div>
+  </div>
+
+  <site-footer></site-footer>
+
+  <script type="text/javascript" src="/sorter/sorter.js"></script>
+</body>
+
 </html>
